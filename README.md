@@ -3,10 +3,8 @@
 # PythonRobotics
 ![GitHub_Action_Linux_CI](https://github.com/AtsushiSakai/PythonRobotics/workflows/Linux_CI/badge.svg)
 ![GitHub_Action_MacOS_CI](https://github.com/AtsushiSakai/PythonRobotics/workflows/MacOS_CI/badge.svg)
+![GitHub_Action_Windows_CI](https://github.com/AtsushiSakai/PythonRobotics/workflows/Windows_CI/badge.svg)
 [![Build status](https://ci.appveyor.com/api/projects/status/sb279kxuv1be391g?svg=true)](https://ci.appveyor.com/project/AtsushiSakai/pythonrobotics)
-[![codecov](https://codecov.io/gh/AtsushiSakai/PythonRobotics/branch/master/graph/badge.svg)](https://codecov.io/gh/AtsushiSakai/PythonRobotics)
-[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/AtsushiSakai/PythonRobotics.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/AtsushiSakai/PythonRobotics/context:python)
-[![tokei](https://tokei.rs/b1/github/AtsushiSakai/PythonRobotics)](https://github.com/AtsushiSakai/PythonRobotics)
 
 Python codes for robotics algorithm.
 
@@ -70,8 +68,9 @@ Python codes for robotics algorithm.
    * [Contribution](#contribution)
    * [Citing](#citing)
    * [Support](#support)
-   * [Sponsors](#Sponsors)
+   * [Sponsors](#sponsors)
       * [JetBrains](#JetBrains)
+      * [1Password](#1password)
    * [Authors](#authors)
 
 # What is this?
@@ -95,7 +94,7 @@ See this paper for more details:
 
 For running each sample code:
 
-- [Python 3.10.x](https://www.python.org/)
+- [Python 3.12.x](https://www.python.org/)
  
 - [NumPy](https://numpy.org/)
  
@@ -107,15 +106,15 @@ For running each sample code:
 
 For development:
   
-- pytest (for unit tests)
+- [pytest](https://pytest.org/) (for unit tests)
   
-- pytest-xdist (for parallel unit tests)
+- [pytest-xdist](https://pypi.org/project/pytest-xdist/) (for parallel unit tests)
   
-- mypy (for type check)
+- [mypy](https://mypy-lang.org/) (for type check)
   
-- sphinx (for document generation)
+- [sphinx](https://www.sphinx-doc.org/) (for document generation)
   
-- pycodestyle (for code style check)
+- [pycodestyle](https://pypi.org/project/pycodestyle/) (for code style check)
 
 # Documentation
 
@@ -131,18 +130,24 @@ All animation gifs are stored here: [AtsushiSakai/PythonRoboticsGifs: Animation 
 
 1. Clone this repo.
 
-> git clone https://github.com/AtsushiSakai/PythonRobotics.git
+   ```terminal
+   git clone https://github.com/AtsushiSakai/PythonRobotics.git
+   ```
 
 
 2. Install the required libraries.
 
-using conda :
+- using conda :
 
-> conda env create -f requirements/environment.yml
+  ```terminal
+  conda env create -f requirements/environment.yml
+  ```
  
-using pip :
+- using pip :
 
-> pip install -r requirements/requirements.txt
+  ```terminal
+  pip install -r requirements/requirements.txt
+  ```
 
 
 3. Execute python script in each directory.
@@ -155,7 +160,9 @@ using pip :
 
 <img src="https://github.com/AtsushiSakai/PythonRoboticsGifs/raw/master/Localization/extended_kalman_filter/animation.gif" width="640" alt="EKF pic">
 
-Documentation: [Notebook](https://github.com/AtsushiSakai/PythonRobotics/blob/master/Localization/extended_kalman_filter/extended_kalman_filter_localization.ipynb)
+Ref:
+
+- [documentation](https://atsushisakai.github.io/PythonRobotics/modules/localization/extended_kalman_filter_localization_files/extended_kalman_filter_localization.html)
 
 ## Particle filter localization
 
@@ -320,7 +327,7 @@ The animation shows a robot finding its path and rerouting to avoid obstacles as
 
 Refs:
 
-- [D* Lite](http://idm-lab.org/bib/abstracts/papers/aaai02b.pd)
+- [D* Lite](http://idm-lab.org/bib/abstracts/papers/aaai02b.pdf)
 - [Improved Fast Replanning for Robot Navigation in Unknown Terrain](http://www.cs.cmu.edu/~maxim/files/dlite_icra02.pdf)
 
 ### Potential Field algorithm
@@ -349,9 +356,9 @@ This code uses the model predictive trajectory generator to solve boundary probl
 
 Ref: 
 
-- [Optimal rough terrain trajectory generation for wheeled mobile robots](http://journals.sagepub.com/doi/pdf/10.1177/0278364906075328)
+- [Optimal rough terrain trajectory generation for wheeled mobile robots](https://journals.sagepub.com/doi/pdf/10.1177/0278364906075328)
 
-- [State Space Sampling of Feasible Motions for High-Performance Mobile Robot Navigation in Complex Environments](http://www.frc.ri.cmu.edu/~alonzo/pubs/papers/JFR_08_SS_Sampling.pdf)
+- [State Space Sampling of Feasible Motions for High-Performance Mobile Robot Navigation in Complex Environments](https://www.frc.ri.cmu.edu/~alonzo/pubs/papers/JFR_08_SS_Sampling.pdf)
 
 
 ### Biased polar sampling
@@ -395,11 +402,11 @@ Ref:
 
 - [Incremental Sampling-based Algorithms for Optimal Motion Planning](https://arxiv.org/abs/1005.0416)
 
-- [Sampling-based Algorithms for Optimal Motion Planning](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.419.5503&rep=rep1&type=pdf)
+- [Sampling-based Algorithms for Optimal Motion Planning](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=bddbc99f97173430aa49a0ada53ab5bade5902fa)
 
 ### RRT\* with reeds-shepp path
 
-![Robotics/animation.gif at master · AtsushiSakai/PythonRobotics](https://github.com/AtsushiSakai/PythonRoboticsGifs/raw/master/PathPlanning/RRTStarReedsShepp/animation.gif))
+![Robotics/animation.gif at master · AtsushiSakai/PythonRobotics](https://github.com/AtsushiSakai/PythonRoboticsGifs/raw/master/PathPlanning/RRTStarReedsShepp/animation.gif)
 
 Path planning for a car robot with RRT\* and reeds shepp path planner.
 
@@ -413,7 +420,7 @@ A double integrator motion model is used for LQR local planner.
 
 Ref:
 
-- [LQR\-RRT\*: Optimal Sampling\-Based Motion Planning with Automatically Derived Extension Heuristics](http://lis.csail.mit.edu/pubs/perez-icra12.pdf)
+- [LQR\-RRT\*: Optimal Sampling\-Based Motion Planning with Automatically Derived Extension Heuristics](https://lis.csail.mit.edu/pubs/perez-icra12.pdf)
 
 - [MahanFathi/LQR\-RRTstar: LQR\-RRT\* method is used for random motion planning of a simple pendulum in its phase plot](https://github.com/MahanFathi/LQR-RRTstar)
 
@@ -428,7 +435,7 @@ It can calculate a 2D path, velocity, and acceleration profile based on quintic 
 
 Ref:
 
-- [Local Path Planning And Motion Control For Agv In Positioning](http://ieeexplore.ieee.org/document/637936/)
+- [Local Path Planning And Motion Control For Agv In Positioning](https://ieeexplore.ieee.org/document/637936/)
 
 ## Reeds Shepp planning
 
@@ -515,7 +522,7 @@ Path tracking simulation with LQR speed and steering control.
 
 Ref:
 
-- [Towards fully autonomous driving: Systems and algorithms \- IEEE Conference Publication](http://ieeexplore.ieee.org/document/5940562/)
+- [Towards fully autonomous driving: Systems and algorithms \- IEEE Conference Publication](https://ieeexplore.ieee.org/document/5940562/)
 
 
 ## Model predictive speed and steering control
@@ -526,7 +533,7 @@ Path tracking simulation with iterative linear model predictive speed and steeri
 
 Ref:
 
-- [notebook](https://github.com/AtsushiSakai/PythonRobotics/blob/master/PathTracking/model_predictive_speed_and_steer_control/Model_predictive_speed_and_steering_control.ipynb)
+- [documentation](https://atsushisakai.github.io/PythonRobotics/modules/path_tracking/model_predictive_speed_and_steering_control/model_predictive_speed_and_steering_control.html)
 
 - [Real\-time Model Predictive Control \(MPC\), ACADO, Python \| Work\-is\-Playing](http://grauonline.de/wordpress/?page_id=3244)
 
@@ -538,7 +545,7 @@ A motion planning and path tracking simulation with NMPC of C-GMRES
 
 Ref:
 
-- [notebook](https://github.com/AtsushiSakai/PythonRobotics/blob/master/PathTracking/cgmres_nmpc/cgmres_nmpc.ipynb)
+- [documentation](https://atsushisakai.github.io/PythonRobotics/modules/path_tracking/cgmres_nmpc/cgmres_nmpc.html)
 
 
 # Arm Navigation
@@ -578,7 +585,7 @@ This is a 3d trajectory generation simulation for a rocket powered landing.
 
 Ref:
 
-- [notebook](https://github.com/AtsushiSakai/PythonRobotics/blob/master/AerialNavigation/rocket_powered_landing/rocket_powered_landing.ipynb)
+- [documentation](https://atsushisakai.github.io/PythonRobotics/modules/aerial_navigation/rocket_powered_landing/rocket_powered_landing.html)
 
 # Bipedal
 
@@ -614,7 +621,7 @@ If you use this project's code for your academic work, we encourage you to cite 
 
 If you use this project's code in industry, we'd love to hear from you as well; feel free to reach out to the developers directly.
 
-# Supporting this project
+# <a id="support"></a>Supporting this project
 
 If you or your company would like to support this project, please consider:
 
@@ -622,17 +629,17 @@ If you or your company would like to support this project, please consider:
 
 - [Become a backer or sponsor on Patreon](https://www.patreon.com/myenigma)
 
-- [One-time donation via PayPal](https://www.paypal.me/myenigmapay/)
+- [One-time donation via PayPal](https://www.paypal.com/paypalme/myenigmapay/)
 
 If you would like to support us in some other way, please contact with creating an issue.
 
-## Sponsors
+## <a id="sponsors"></a>Sponsors
 
-### [JetBrains](https://www.jetbrains.com/)
+### <a id="JetBrains"></a>[JetBrains](https://www.jetbrains.com/)
 
 They are providing a free license of their IDEs for this OSS development.   
 
-### [1Password](https://github.com/1Password/1password-teams-open-source)
+### [1Password](https://github.com/1Password/for-open-source)
 
 They are providing a free license of their 1Password team license for this OSS project.   
 
